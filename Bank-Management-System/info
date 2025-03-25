@@ -1,3 +1,49 @@
 🌟1️⃣ Bank Management System:
 "A simple banking system that allows users to create accounts, deposit money, withdraw funds, and check balances." 
 Concepts Used✨: Object-Oriented Programming🧑‍💻(OOP), Exception Handling🛡️, Collections📦, and File Management📄(optional).
+
+There are 3 files:
+_________________________________________
+✅ 1. BankAccount Class
+
+•	What it does:
+o	Represents a bank account with details like:
+1. Account Number
+2. Account Holder Name
+3. Balance
+o	Keeps a record of all transactions using a list called transactionHistory.
+•	Features:
+o	Create Account → Stores initial balance and records the account creation.
+o	Deposit Money → Adds money to the account, updates the balance, and logs the transaction.
+o	Withdraw Money → Deducts money if there are enough funds and logs it. If not, it shows an error.
+o	Interest Calculation → Applies interest based on a given rate and time using the formula:
+Interest=Principal × Rate × Time100\text{Interest} = \frac{\text{Principal × Rate × Time}}{100} 
+o	View Transaction History → Displays all past activities (deposits, withdrawals, interest applied).
+________________________________________
+✅ 2. BankManagementSystem Class
+
+•	What it does:
+o	Manages multiple accounts using a HashMap where:
+1. Key → Account Number
+2. Value → BankAccount Object
+o	Performs operations like creating accounts, deposits, withdrawals, applying interest, and viewing transaction history.
+•	File Management:
+o	It uses Serialization to save all account data to a file called accounts.txt.
+o	Data is loaded automatically when the program starts.
+o	This means even if you close the program, your data remains safe!
+________________________________________
+✅ 3. BankSystemApp Class (Main Class)
+
+•	What it does:
+o	Displays a Menu with options like:
+1.	Create Account
+2.	Deposit Money
+3.	Withdraw Money
+4.	Display Account Details
+5.	Apply Interest
+6.	View Transaction History
+7.	Exit
+o	Based on your choice, it calls the appropriate methods from BankManagementSystem.
+_________________________________________
+
+
